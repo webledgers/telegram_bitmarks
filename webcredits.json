@@ -1,10 +1,19 @@
-[{
-  "source": "cac5bb7e5310ebc966c987e81b700c575c5c325d4e32dd1f8204b5987566e919:0",
-  "destination": "urn:telegram:97291900",
-  "amount": 1000
-},
-{
-  "source": "e558a44becb6b823b010cc193a5cd2a0eb60d3469a51190013367239aaf25a20:0",
-  "destination": "urn:telegram:675886023",
-  "amount": 1000
-}]
+[
+  {
+    "source": "cac5bb7e5310ebc966c987e81b700c575c5c325d4e32dd1f8204b5987566e919:0",
+    "destination": "urn:telegram:97291900",
+    "amount": 1000
+  },
+  {
+    "source": "e558a44becb6b823b010cc193a5cd2a0eb60d3469a51190013367239aaf25a20:0",
+    "destination": "urn:telegram:675886023",
+    "amount": 1000
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:675886023",
+    "amount": 1,
+    "comment": "for help testing marking v.next",
+    "timestamp": 1617985255
+  }
+]
