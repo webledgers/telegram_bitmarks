@@ -1,2 +1,5 @@
-# telegram_bitmarks
-web ledger for telegram bitmarks group
+# webledger
+
+webledger for telegram bitmarks
+
+[wallet.json](wallet.json)

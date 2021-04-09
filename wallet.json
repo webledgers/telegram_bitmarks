@@ -1,0 +1,7 @@
+{
+  "name": "bitmarks telegram wallet",
+  "webledger": "./webledger.json",
+  "webcredits": "./webcredits.json",
+  "publickey": "0327d60c4171273bc30bd0f1d8705b45ddd9442874d911a8d330ef57cbdabbe4ba",
+  "currency": "marks"
+}
