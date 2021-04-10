@@ -15,5 +15,12 @@
     "amount": 1,
     "comment": "for help testing marking v.next",
     "timestamp": 1617985255
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:675886023",
+    "amount": 1,
+    "comment": "for cheeserobot",
+    "timestamp": 1618040562
   }
 ]
