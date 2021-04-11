@@ -29,5 +29,33 @@
     "amount": 1,
     "comment": "https://bitcoinvisuals.com/lightning lightning network visuals",
     "timestamp": 1618131910
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://www.commerceblock.com/ commerceblock side chain",
+    "timestamp": 1618135424
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://www.commerceblock.com/mainstay/ commercblock mainstay",
+    "timestamp": 1618135461
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://gist.github.com/RubenSomsen/5e4be6d18e5fa526b17d8b34906b16a5 Blind Merged Mining with covenants",
+    "timestamp": 1618135522
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://www.youtube.com/watch?v=N2ow4Q34Jeg Spacechains – Permissionless Blockchains for Bitcoin",
+    "timestamp": 1618135556
   }
 ]
