@@ -57,5 +57,19 @@
     "amount": 1,
     "comment": "https://www.youtube.com/watch?v=N2ow4Q34Jeg Spacechains – Permissionless Blockchains for Bitcoin",
     "timestamp": 1618135556
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://cloudflare-ipfs.com/ipns/ipfs.commerceblock.com/commerceblock-whitepaper-mainstay.pdf mainstay white paper",
+    "timestamp": 1618138540
+  },
+  {
+    "source": "urn:telegram:675886023",
+    "destination": "urn:telegram:97291900",
+    "amount": 1,
+    "comment": "noice",
+    "timestamp": 1618563876
   }
 ]
