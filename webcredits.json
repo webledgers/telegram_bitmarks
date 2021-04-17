@@ -2,12 +2,14 @@
   {
     "source": "cac5bb7e5310ebc966c987e81b700c575c5c325d4e32dd1f8204b5987566e919:0",
     "destination": "urn:telegram:97291900",
-    "amount": 1000
+    "amount": 1000,
+    "comment": "deposit"
   },
   {
     "source": "e558a44becb6b823b010cc193a5cd2a0eb60d3469a51190013367239aaf25a20:0",
     "destination": "urn:telegram:675886023",
-    "amount": 1000
+    "amount": 1000,
+    "comment": "deposit"
   },
   {
     "source": "urn:telegram:97291900",
@@ -76,11 +78,13 @@
     "source": "741bf32e1b0c3e93675dc7b194b9eb71a0cc1402fced51cb2ffc8248e65b2338:1",
     "destination": "urn:telegram:97291900",
     "amount": 1000,
+    "comment": "deposit",
     "timestamp": 1618592383
   },
   {
     "source": "urn:telegram:97291900",
     "destination": "28db912b91c430ea69b1ca81cab5078da0a2e6909afc5bf5a9034b92d74d9e25:0",
+    "comment": "withrawal cac5bb7e5310ebc966c987e81b700c575c5c325d4e32dd1f8204b5987566e919:0",
     "amount": 1000
   }
 ]
