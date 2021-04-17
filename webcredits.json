@@ -77,5 +77,10 @@
     "destination": "urn:telegram:97291900",
     "amount": 1000,
     "timestamp": 1618592383
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "28db912b91c430ea69b1ca81cab5078da0a2e6909afc5bf5a9034b92d74d9e25:0",
+    "amount": 1000
   }
 ]
