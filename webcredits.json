@@ -179,5 +179,12 @@
     "amount": 2,
     "comment": "https://www.youtube.com/watch?v=coHC_9ApBdg",
     "timestamp": 1619040638
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://www.reddit.com/r/Bitcoin/comments/mwub59/bitcoin_will_save_the_world_from_this/",
+    "timestamp": 1619197413
   }
 ]
