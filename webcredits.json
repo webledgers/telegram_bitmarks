@@ -200,5 +200,12 @@
     "amount": 500,
     "comment": "deposit",
     "timestamp": 1619213368
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "e9b6a1777594b4ba2d3a21c706525fd22d22322d7f55ed36ea64d18662ee72e9:0",
+    "comment": "withdrawal 139cf38620c05da0ababd8c3c8b9ac3907123258a9e5b6716a9983a5504c1c5a:1",
+    "amount": "100",
+    "timestamp": 1619215151
   }
 ]
