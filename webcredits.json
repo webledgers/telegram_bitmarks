@@ -228,5 +228,12 @@
     "amount": 1,
     "comment": "https://twitter.com/ecb/status/1385554398697463810 ECB NIRP (non) justification",
     "timestamp": 1619275022
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://twitter.com/Blockstream/status/1385617648906608642 dynamic federations",
+    "timestamp": 1619279570
   }
 ]
