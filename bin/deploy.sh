@@ -42,5 +42,6 @@ then
 fi
 RES=$(git commit --allow-empty -m "gitmark ${HASH}")
 echo "${RES}"
+
 git push origin gh-pages
 
