@@ -24,6 +24,7 @@ git push origin gh-pages
 git mark
 sleep 1
 git mark > "${TMPFILE}"
+# TODO check for empty tx
 
 cat "${TMPFILE}"
 
