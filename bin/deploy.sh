@@ -22,6 +22,7 @@ git push origin gh-pages
 
 # run twice in case new tx is not there
 git mark
+sleep 1
 git mark > "${TMPFILE}"
 
 cat "${TMPFILE}"
