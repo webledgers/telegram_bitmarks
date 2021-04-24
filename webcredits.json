@@ -249,5 +249,12 @@
     "amount": 1,
     "comment": "https://medium.com/blockstream/native-confidential-assets-on-the-liquid-network-293091b3c4c6 issue assets on liquid",
     "timestamp": 1619285601
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://bitmark.rocks/",
+    "timestamp": 1619296247
   }
 ]
