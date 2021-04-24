@@ -39,6 +39,6 @@ then
   echo no hash found, something went wrong
   exit
 fi
-$(git commit --allow-empty -m 'gitmark ${HASH}')
+$(git commit --allow-empty -m "gitmark ${HASH}")
 git push origin gh-pages
 
