@@ -9,12 +9,25 @@
       import { html, render } from './js/spux.js'
       import Navbar from './components/Navbar.js'
 
-      var webledger
+      var webledger, usernames
+
+      function getNickFromId (key) {
+        const keys = Object.keys(usernames)
+        const ret = keys.find(el => usernames[el] === key)
+        return ret || key
+      }
 
       fetch('./webledger.json')
         .then(response => response.json())
         .then(obj => {
           webledger = obj
+          renderAll()
+        })
+
+      fetch('./usernames.json')
+        .then(response => response.json())
+        .then(obj => {
+          usernames = obj
           renderAll()
         })
 
@@ -34,7 +47,7 @@
               ${ledger.map(el => {
                 return html`
                   <tr>
-                    <td>${el[0]}</td>
+                    <td>${getNickFromId(el[0])}</td>
                     <td>${el[1]}</td>
                   </tr>
                 `

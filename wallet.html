@@ -1,26 +1,28 @@
 <html>
-  <head>
-    <title>Wallet</title>
-    <link rel="stylesheet" href="css/spux.css" />
-    <script type="application/ld+json" src="./wallet.json" id="data"></script>
-  </head>
-  <body>
-    <script type="module">
-      import { html, render } from './js/spux.js'
-      import Navbar from './components/Navbar.js'
 
-      var wallet
+<head>
+  <title>Wallet</title>
+  <link rel="stylesheet" href="css/spux.css" />
+  <script type="application/ld+json" src="./wallet.json" id="data"></script>
+</head>
 
-      fetch('./wallet.json')
-        .then(response => response.json())
-        .then(obj => {
-          wallet = obj
-          renderAll()
-        })
+<body>
+  <script type="module">
+    import { html, render } from './js/spux.js'
+    import Navbar from './components/Navbar.js'
 
-      function renderAll () {
-        render(
-          html`
+    var wallet
+
+    fetch('./wallet.json')
+      .then(response => response.json())
+      .then(obj => {
+        wallet = obj
+        renderAll()
+      })
+
+    function renderAll() {
+      render(
+        html`
             <${Navbar} title="Wallet" />
 
             <table>
@@ -46,9 +48,10 @@
               </tr>
             </table>
           `,
-          document.body
-        )
-      }
-    </script>
-  </body>
+        document.body
+      )
+    }
+  </script>
+</body>
+
 </html>

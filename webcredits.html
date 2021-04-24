@@ -9,12 +9,25 @@
       import { html, render } from './js/spux.js'
       import Navbar from './components/Navbar.js'
 
-      var webcredits
+      var webcredits, usernames
+
+      function getNickFromId (key) {
+        const keys = Object.keys(usernames)
+        const ret = keys.find(el => usernames[el] === key)
+        return ret || key
+      }
 
       fetch('./webcredits.json')
         .then(response => response.json())
         .then(obj => {
           webcredits = obj
+          renderAll()
+        })
+
+      fetch('./usernames.json')
+        .then(response => response.json())
+        .then(obj => {
+          usernames = obj
           renderAll()
         })
 
@@ -27,17 +40,17 @@
               <tr>
                 <th>Source</th>
                 <th>Amount</th>
-                <th>Comment</th>
                 <th>Destination</th>
+                <th>Comment</th>
               </tr>
 
-              ${webcredits.map(el => {
+              ${webcredits.filter(el => el.comment && !el.comment.match(/^deposit/) && !el.comment.match(/^withdrawal/) ).map(el => {
                 return html`
                   <tr>
-                    <td>${el.source}</td>
+                    <td>${getNickFromId( el.source)}</td>
                     <td>${el.amount}</td>
+                    <td>${getNickFromId(el.destination)}</td>
                     <td>${el.comment}</td>
-                    <td>${el.destination}</td>
                   </tr>
                 `
               })}
