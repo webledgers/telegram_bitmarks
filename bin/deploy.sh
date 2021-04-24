@@ -35,6 +35,5 @@ HASH=$(${BTMEXE} ${TX})
 echo "git commit --allow-empty -m 'gitmark ${HASH}'"
 
 # TODO
-# run tx
 # add commit
 # push
