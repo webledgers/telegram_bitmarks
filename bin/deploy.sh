@@ -2,9 +2,9 @@
 
 TMPFILE="/tmp/gitmark.$$.txt"
 DEFAULT_MESSAGE="webledger"
-MESSAGE="${1:-DEFAULT_MESSAGE}"
+MESSAGE="${1:-$DEFAULT_MESSAGE}"
 # set up btm as remote exe
-BTMEXE="btm"
+BTMEXE="ssh ubuntu@157.90.144.229"
 
 
 git pull origin gh-pages
@@ -22,7 +22,9 @@ git push origin gh-pages
 
 # run twice in case new tx is not there
 git mark
+sleep 1
 git mark > "${TMPFILE}"
+# TODO check for empty tx
 
 cat "${TMPFILE}"
 
@@ -32,9 +34,13 @@ echo
 echo "${TX}"
 
 HASH=$(${BTMEXE} ${TX})
-echo "git commit --allow-empty -m ${HASH}"
+echo "${HASH}" | grep '^[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].*'
+if [ $? -eq 1 ]
+then
+  echo no hash found, something went wrong
+  exit
+fi
+RES=$(git commit --allow-empty -m "gitmark ${HASH}")
+echo "${RES}"
+git push origin gh-pages
 
-# TODO
-# run tx
-# add commit
-# push
