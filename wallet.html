@@ -1,52 +1,54 @@
-
-
 <html>
   <head>
     <title>Wallet</title>
     <link rel="stylesheet" href="css/spux.css" />
-    <script type="application/ld+json" id="data">
-      {
-        "name": "bitmarks telegram wallet",
-        "webledger": "./webledger.json",
-        "webcredits": "./webcredits.json",
-        "publickey": "0327d60c4171273bc30bd0f1d8705b45ddd9442874d911a8d330ef57cbdabbe4ba",
-        "currency": "marks"
-      }
-      
-    </script>
+    <script type="application/ld+json" src="./wallet.json" id="data"></script>
   </head>
   <body>
     <script type="module">
       import { html, render } from './js/spux.js'
-      import './js/dior.js'
       import Navbar from './components/Navbar.js'
 
+      var wallet
 
-      var wallet = di.data
-      
+      fetch('./wallet.json')
+        .then(response => response.json())
+        .then(obj => {
+          wallet = obj
+          renderAll()
+        })
 
-      render(
-        html`
+      function renderAll () {
+        render(
+          html`
+            <${Navbar} title="Wallet" />
 
-          <${Navbar} title="Wallet" />
-
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Currency</th>
-              <th>Ledger</th>
-              <th>Credits</th>
-            </tr>
-            <tr>
-            <td>${wallet.name}</td>
-            <td>${wallet.currency}</td>
-            <td>${wallet.webledger}</td>
-            <td>${wallet.webcredits}</td>
-            </tr>
-          </table>
-        `,
-        document.body
-      )
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Currency</th>
+                <th>Ledger</th>
+                <th>Credits</th>
+              </tr>
+              <tr>
+                <td>${wallet.name}</td>
+                <td>${wallet.currency}</td>
+                <td>
+                  <a href="${wallet.webledger.replace('json', 'html')}"
+                    >${wallet.webledger.replace('json', 'html')}</a
+                  >
+                </td>
+                <td>
+                  <a href="${wallet.webcredits.replace('json', 'html')}"
+                    >${wallet.webcredits.replace('json', 'html')}</a
+                  >
+                </td>
+              </tr>
+            </table>
+          `,
+          document.body
+        )
+      }
     </script>
   </body>
 </html>
