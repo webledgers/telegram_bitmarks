@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>webledger</title>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/spux.css" />
     <script type="application/ld+json" src="./wallet.json" id="data"></script>
   </head>
@@ -31,6 +32,15 @@
           renderAll()
         })
 
+      function urlify (text) {
+        var urlRegex = /(https?:\/\/[^\s]+)/g
+        return text.replace(urlRegex, function (url) {
+          return '<a href="' + url + '">' + url + '</a>'
+        })
+        // or alternatively
+        // return text.replace(urlRegex, '<a href="$1">$1</a>')
+      }
+
       function renderAll () {
         render(
           html`
@@ -39,21 +49,41 @@
             <table>
               <tr>
                 <th>Source</th>
-                <th style='background-color: #FFFF99; font-weight: bold'>Amount</th>
+                <th style="background-color: #FFFF99; font-weight: bold">
+                  Amount
+                </th>
                 <th>Destination</th>
                 <th>Comment</th>
               </tr>
 
-              ${webcredits.filter(el => el.comment && !el.comment.match(/^deposit/) && !el.comment.match(/^withdrawal/) ).sort((a,b) => b.timestamp - a.timestamp).map(el => {
-                return html`
-                  <tr>
-                    <td>${getNickFromId( el.source)}</td>
-                    <td style='background-color: #FFFF99; font-weight: bold'>${el.amount}</td>
-                    <td>${getNickFromId(el.destination)}</td>
-                    <td>${el.comment}</td>
-                  </tr>
-                `
-              })}
+              ${webcredits
+                .filter(
+                  el =>
+                    el.comment &&
+                    !el.comment.match(/^deposit/) &&
+                    !el.comment.match(/^withdrawal/)
+                )
+                .sort((a, b) => b.timestamp - a.timestamp)
+                .map(el => {
+                  var urlRegex = /(https?:\/\/[^\s]+)/g
+
+                  var arr = el.comment.match(urlRegex)
+                  arr = arr || ['']
+                  console.log('arr', arr)
+
+                  return html`
+                    <tr>
+                      <td>${getNickFromId(el.source)}</td>
+                      <td style="background-color: #FFFF99; font-weight: bold">
+                        ${el.amount}
+                      </td>
+                      <td>${getNickFromId(el.destination)}</td>
+                      <td>
+                        <a target="_blank" href="${arr[0]}">➦</a> ${el.comment}
+                      </td>
+                    </tr>
+                  `
+                })}
             </table>
           `,
           document.body
