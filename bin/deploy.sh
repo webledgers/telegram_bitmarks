@@ -4,7 +4,7 @@ TMPFILE="/tmp/gitmark.$$.txt"
 DEFAULT_MESSAGE="webledger"
 MESSAGE="${1:-DEFAULT_MESSAGE}"
 # set up btm as remote exe
-BTMEXE="btm"
+BTMEXE="ssh ubuntu@157.90.144.229"
 
 
 git pull origin gh-pages
