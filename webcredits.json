@@ -235,5 +235,12 @@
     "amount": 1,
     "comment": "https://twitter.com/Blockstream/status/1385617648906608642 dynamic federations",
     "timestamp": 1619279570
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://twitter.com/ObiWanKenoBit/status/1385643477262692357 taleb salt mine lol",
+    "timestamp": 1619282811
   }
 ]
