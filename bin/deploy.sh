@@ -33,8 +33,12 @@ echo
 echo "${TX}"
 
 HASH=$(${BTMEXE} ${TX})
-echo "git commit --allow-empty -m 'gitmark ${HASH}'"
+echo "${HASH}" | grep '^[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].*'
+if [ $? -eq 1 ]
+then
+  echo no hash found, something went wrong
+  exit
+fi
+$(git commit --allow-empty -m 'gitmark ${HASH}')
+git push origin gh-pages
 
-# TODO
-# add commit
-# push
