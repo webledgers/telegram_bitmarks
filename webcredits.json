@@ -221,5 +221,12 @@
     "amount": 2,
     "comment": "https://webledgers.github.io/telegram_bitmarks/webledger.html webledger html",
     "timestamp": 1619259997
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://twitter.com/ecb/status/1385554398697463810 ECB NIRP (non) justification",
+    "timestamp": 1619275022
   }
 ]
