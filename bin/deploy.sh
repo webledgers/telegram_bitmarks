@@ -2,7 +2,7 @@
 
 TMPFILE="/tmp/gitmark.$$.txt"
 DEFAULT_MESSAGE="webledger"
-MESSAGE="${1:-DEFAULT_MESSAGE}"
+MESSAGE="${1:-$DEFAULT_MESSAGE}"
 # set up btm as remote exe
 BTMEXE="ssh ubuntu@157.90.144.229"
 
@@ -32,7 +32,7 @@ echo
 echo "${TX}"
 
 HASH=$(${BTMEXE} ${TX})
-echo "git commit --allow-empty -m ${HASH}"
+echo "git commit --allow-empty -m 'gitmark ${HASH}'"
 
 # TODO
 # run tx
