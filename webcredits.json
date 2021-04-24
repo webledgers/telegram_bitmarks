@@ -242,5 +242,12 @@
     "amount": 1,
     "comment": "https://twitter.com/ObiWanKenoBit/status/1385643477262692357 taleb salt mine lol",
     "timestamp": 1619282811
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://medium.com/blockstream/native-confidential-assets-on-the-liquid-network-293091b3c4c6 issue assets on liquid",
+    "timestamp": 1619285601
   }
 ]
