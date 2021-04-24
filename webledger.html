@@ -41,14 +41,14 @@
             <table>
               <tr>
                 <th>User</th>
-                <th>Balance</th>
+                <th style='background-color: #FFFF99; font-weight: bold'>Balance</th>
               </tr>
 
-              ${ledger.map(el => {
+              ${ledger.sort((a,b) => b[1] - a[1]).map(el => {
                 return html`
                   <tr>
                     <td>${getNickFromId(el[0])}</td>
-                    <td>${el[1]}</td>
+                    <td style='background-color: #FFFF99; font-weight: bold'>${el[1]}</td>
                   </tr>
                 `
               })}

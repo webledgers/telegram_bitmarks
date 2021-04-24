@@ -39,16 +39,16 @@
             <table>
               <tr>
                 <th>Source</th>
-                <th>Amount</th>
+                <th style='background-color: #FFFF99; font-weight: bold'>Amount</th>
                 <th>Destination</th>
                 <th>Comment</th>
               </tr>
 
-              ${webcredits.filter(el => el.comment && !el.comment.match(/^deposit/) && !el.comment.match(/^withdrawal/) ).map(el => {
+              ${webcredits.filter(el => el.comment && !el.comment.match(/^deposit/) && !el.comment.match(/^withdrawal/) ).sort((a,b) => b.timestamp - a.timestamp).map(el => {
                 return html`
                   <tr>
                     <td>${getNickFromId( el.source)}</td>
-                    <td>${el.amount}</td>
+                    <td style='background-color: #FFFF99; font-weight: bold'>${el.amount}</td>
                     <td>${getNickFromId(el.destination)}</td>
                     <td>${el.comment}</td>
                   </tr>
