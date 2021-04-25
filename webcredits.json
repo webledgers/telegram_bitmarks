@@ -270,5 +270,19 @@
     "amount": 1,
     "comment": "https://git-mark.com/ git mark",
     "timestamp": 1619301049
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://twitter.com/cgjungny/status/1386033472192405505 Jung on man and history",
+    "timestamp": 1619345177
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://dev.to/pb/10-github-repositories-every-developer-should-know-ngm",
+    "timestamp": 1619345373
   }
 ]
