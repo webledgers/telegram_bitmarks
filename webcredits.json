@@ -291,5 +291,12 @@
     "amount": 1,
     "comment": "https://github.com/project-bitmark/marking/wiki marking wiki",
     "timestamp": 1619377429
+  },
+  {
+    "source": "urn:telegram:97291900",
+    "destination": "urn:telegram:1791644983",
+    "amount": 1,
+    "comment": "https://www.youtube.com/watch?v=vEgjBuRZOFA botpress video",
+    "timestamp": 1619379875
   }
 ]
